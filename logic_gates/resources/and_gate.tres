@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="LogicGate" load_steps=2 format=3 uid="uid://c3mxnpe40pcuk"]
+
+[ext_resource type="Script" path="res://logic_gates/logic_gate_class.gd" id="1_t4opd"]
+
+[resource]
+script = ExtResource("1_t4opd")
+gate_name = "AND"
+gate_description = "test"
+gate_id = 1

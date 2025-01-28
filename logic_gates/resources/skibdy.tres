@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LogicGate" load_steps=2 format=3 uid="uid://c0rf7qgnb68mq"]
+
+[ext_resource type="Script" path="res://logic_gates/logic_gate_class.gd" id="1_xcjv2"]
+
+[resource]
+script = ExtResource("1_xcjv2")
+gate_name = "nig"
+gate_description = "checkcheck"

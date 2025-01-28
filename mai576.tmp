@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ubkanc7137n3"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_5x7j3"]
+[ext_resource type="PackedScene" uid="uid://baglsvkh3731d" path="res://logic_gates/logic_gate_scene.tscn" id="1_di43s"]
+[ext_resource type="Resource" uid="uid://b72qw3yt3hus3" path="res://logic_gates/resources/not_gate.tres" id="2_xcnrw"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_5x7j3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CircuitSelect" type="TabBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+
+[node name="LogicGate" parent="." instance=ExtResource("1_di43s")]
+position = Vector2(137, 157)
+logic_gate = ExtResource("2_xcnrw")
+
+[node name="LogicGate2" parent="." instance=ExtResource("1_di43s")]
+position = Vector2(280, 238)
+logic_gate = ExtResource("2_xcnrw")
+
+[connection signal="tab_changed" from="CanvasLayer/CircuitSelect" to="." method="_on_circuit_select_tab_changed"]

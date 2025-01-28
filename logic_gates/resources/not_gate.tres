@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="LogicGate" load_steps=2 format=3 uid="uid://b72qw3yt3hus3"]
+
+[ext_resource type="Script" path="res://logic_gates/logic_gate_class.gd" id="1_fvrg1"]
+
+[resource]
+script = ExtResource("1_fvrg1")
+gate_name = "NOT"
+gate_description = "Output returns opposite of input"

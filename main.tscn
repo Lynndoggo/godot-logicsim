@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://ubkanc7137n3"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_5x7j3"]
+[ext_resource type="Script" path="res://camera_2d.gd" id="2_kbnsx"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_5x7j3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CircuitSelect" type="TabBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+
+[node name="Spawn Circuit" type="Button" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+text = "Spawn Circuit"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_kbnsx")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[connection signal="tab_changed" from="CanvasLayer/CircuitSelect" to="." method="_on_circuit_select_tab_changed"]
+[connection signal="pressed" from="CanvasLayer/Spawn Circuit" to="." method="_on_spawn_circuit_pressed"]
