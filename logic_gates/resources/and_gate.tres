@@ -5,5 +5,4 @@
 [resource]
 script = ExtResource("1_t4opd")
 gate_name = "AND"
-gate_description = "test"
-gate_id = 1
+gate_description = "Outputs signal when both inputs are on"
