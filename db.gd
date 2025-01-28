@@ -1,5 +1,8 @@
 extends Node
 
+#circuits only draggable when nothing else is dragged (to prevent dragging multiple circuits at once)#
+var smth_dragged = false 
+
 var logic_gates = {}
 
 func _ready() -> void:
